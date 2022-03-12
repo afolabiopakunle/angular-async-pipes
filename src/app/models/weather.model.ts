@@ -1,4 +1,4 @@
-export interface Pokedex {
+export interface WeatherModel {
   ip?:             string;
   type?:           string;
   continentCode?:  string;

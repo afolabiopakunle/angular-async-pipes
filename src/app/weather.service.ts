@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { WeatherModel } from './models/weather.model';
 // import { Weather } from './app.component';
 
 @Injectable()
@@ -8,7 +9,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeatherPayload(): Observable<any> {
+  getWeatherPayload(): Observable<WeatherModel> {
    return this.http.get('https://weatherapi-com.p.rapidapi.com/ip.json', {
       headers: {
         'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',

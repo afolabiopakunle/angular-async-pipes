@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { ArtworkService } from './artwork.service';
+import { WeatherService } from './weather.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ArtworkService]
+  providers: [WeatherService]
 })
 export class AppModule { }
