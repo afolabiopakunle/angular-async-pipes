@@ -1,4 +1,5 @@
 import { Component, OnInit, VERSION } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ArtworkService } from './artwork.service';
 
 @Component({
@@ -8,14 +9,10 @@ import { ArtworkService } from './artwork.service';
 })
 export class AppComponent implements OnInit {
 
-  data$: any;
+  data$: Observable<any>;
   
   constructor(private artworkService: ArtworkService) {}
   ngOnInit() {
-    this.artworkService.getWeatherPayload()
-    .subscribe(response => {
-      this.data$ = response
-      console.log("Hi",response )
-    })
+  this.data$ = this.artworkService.getWeatherPayload()
   }
 }
