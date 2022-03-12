@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 // import { Weather } from './app.component';
 
 @Injectable()
-export class ArtworkService {
+export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
